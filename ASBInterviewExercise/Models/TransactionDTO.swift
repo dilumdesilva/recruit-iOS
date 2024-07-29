@@ -26,4 +26,20 @@ struct TransactionModel: Codable {
         case debit
         case credit
     }
+    
+    var transactionType: TransactionType {
+        if credit != 0 {
+            return .credit
+        } else {
+            return .debit
+        }
+    }
+    
+    var gst: Double? {
+        if transactionType == .debit {
+            return debit * Constants.Domain.gstPercentage
+        } else {
+            return nil
+        }
+    }
 }
