@@ -1,16 +1,24 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Swinject",
-        "repositoryURL": "https://github.com/Swinject/Swinject.git",
-        "state": {
-          "branch": null,
-          "revision": "8a76d2c74bafbb455763487cc6a08e91bad1f78b",
-          "version": "2.7.1"
-        }
+  "originHash" : "6093ecac6113d3a8ec549bfe980afdcba5553c14181e9e0f3742d4fda07338fa",
+  "pins" : [
+    {
+      "identity" : "swiftybeaver",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyBeaver/SwiftyBeaver.git",
+      "state" : {
+        "revision" : "8cba041db09596183331d123f337d0eb2e6e8e91",
+        "version" : "2.1.1"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject.git",
+      "state" : {
+        "revision" : "8a76d2c74bafbb455763487cc6a08e91bad1f78b",
+        "version" : "2.7.1"
+      }
+    }
+  ],
+  "version" : 3
 }

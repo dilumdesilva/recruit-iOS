@@ -16,6 +16,7 @@
 		4E3554A02C5886B80079C678 /* mock_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EDEBBD32C5863990068AEFE /* mock_data.json */; };
 		4E3554A22C588E230079C678 /* mock_invalid_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E3554A12C588E230079C678 /* mock_invalid_data.json */; };
 		4E3554A32C58901C0079C678 /* mock_invalid_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E3554A12C588E230079C678 /* mock_invalid_data.json */; };
+		4E7FE43B2C589EFC00F0C354 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 4E7FE43A2C589EFC00F0C354 /* SwiftyBeaver */; };
 		4EDEBBC62C585FCD0068AEFE /* TransactionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBC52C585FCD0068AEFE /* TransactionsListView.swift */; };
 		4EDEBBC82C58603E0068AEFE /* TransactionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBC72C58603E0068AEFE /* TransactionDetailsView.swift */; };
 		4EDEBBCB2C5860F70068AEFE /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBCA2C5860F70068AEFE /* TransactionsViewModel.swift */; };
@@ -94,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCF7BB3526B23E3600AE0E0E /* Swinject in Frameworks */,
+				4E7FE43B2C589EFC00F0C354 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +241,7 @@
 			name = ASBInterviewExercise;
 			packageProductDependencies = (
 				DCF7BB3426B23E3600AE0E0E /* Swinject */,
+				4E7FE43A2C589EFC00F0C354 /* SwiftyBeaver */,
 			);
 			productName = ASBInterviewExercise;
 			productReference = DCF7BB0026B23DFE00AE0E0E /* ASBInterviewExercise.app */;
@@ -313,6 +316,7 @@
 			mainGroup = DCF7BAF726B23DFE00AE0E0E;
 			packageReferences = (
 				DCF7BB3326B23E3600AE0E0E /* XCRemoteSwiftPackageReference "Swinject" */,
+				4E3554A42C589DCF0079C678 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 			);
 			productRefGroup = DCF7BB0126B23DFE00AE0E0E /* Products */;
 			projectDirPath = "";
@@ -709,6 +713,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4E3554A42C589DCF0079C678 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
 		DCF7BB3326B23E3600AE0E0E /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
@@ -720,6 +732,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4E7FE43A2C589EFC00F0C354 /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E3554A42C589DCF0079C678 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
 		DCF7BB3426B23E3600AE0E0E /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DCF7BB3326B23E3600AE0E0E /* XCRemoteSwiftPackageReference "Swinject" */;

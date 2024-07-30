@@ -17,7 +17,7 @@ extension MockAPITarget: BaseAPITarget {
         switch self {
         case .getTransactionsSuccessful:
             return Constants.API.getTrasactionsPath
-        case .getTransactionFailure
+        case .getTransactionFailure:
             return Constants.API.getTrasactionsPath
         }
     }
@@ -42,7 +42,7 @@ extension MockAPITarget: BaseAPITarget {
     
     var stubData: String {
         switch self {
-        case .getTransactions:
+        case .getTransactionsSuccessful:
             return Constants.Files.mockData
         case .getTransactionFailure:
             return Constants.Files.mockInvalidData

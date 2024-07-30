@@ -19,14 +19,17 @@ class ASBInterviewExerciseTests: XCTestCase {
     }
     
     func testGetTransactionSuccess() async {
+        // Arrange
         let mockStore = MockNetworkingStore()
-        let mockResult = await mockStore.mockGetTransactionsSuccessful()
         
         let expectedFirstTransactionData = TransactionDTO(
             id: 1,
             transactionDate: "2021-08-31T15:47:10",
             summary: "Dilum mocking data here",
             debit: 9379.55, credit: 0)
+        
+        //Act
+        let mockResult = await mockStore.mockGetTransactionsSuccessful()
         
         switch mockResult {
         case .success(let transactions):
@@ -44,25 +47,21 @@ class ASBInterviewExerciseTests: XCTestCase {
         }
     }
     
-    //TODO: COMPLETE FAILURE PATH
-//    func testGetTransactionFails() async {
-//        let mockStore = MockNetworkingStore()
-//        let mockResult = await mockStore.mockGetTransactionsFailure()
-//        
-//        let expectedFirstTransactionData = TransactionDTO(
-//            id: 1,
-//            transactionDate: "2021-08-31T15:47:10",
-//            summary: "Dilum mocking data here",
-//            debit: 9379.55, credit: 0)
-//        
-//        switch mockResult {
-//        case .success(let transactions):
-//            // Assert
-//            XCTAssertTrue(transactions.isEmpty, "Error loading data, transaction should be empty")
-//        case .failure(let error):
-//            XCTAssertNil(error)
-//            break
-//        }
-//    }
+    func testGetTransactionFailsWhenInvalidData() async {
+        // Arrange
+        let mockStore = MockNetworkingStore()
+        //Act
+        let mockResult = await mockStore.mockGetTransactionsFailure()
+        
+        switch mockResult {
+        case .success(let transactions):
+            break
+        case .failure(let error):
+            // Assert
+            XCTAssertNotNil(error)
+            XCTAssertEqual(error, NetworkError.decode, "Error should be decode as invalid data")
+            break
+        }
+    }
     
 }
