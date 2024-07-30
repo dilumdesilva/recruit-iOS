@@ -33,6 +33,7 @@ struct Constants {
         static let myTransactions =  "My Transactions"
         static let summary =  "Summary"
         static let gst = "GST"
+        static let loading = "Loading..."
     }
     
     struct Formatters {

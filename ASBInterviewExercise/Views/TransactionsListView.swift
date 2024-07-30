@@ -13,21 +13,32 @@ struct TransactionsListView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVStack {
-                    ForEach(viewModel.transactions ?? [], id: \.id) { transaction in
-                        NavigationLink {
-                            TransactionDetailsView(transaction: transaction)
-                        } label: {
-                            TransactionCardView(transaction: transaction)
+            ZStack {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(viewModel.transactions ?? [], id: \.id) { transaction in
+                            NavigationLink {
+                                TransactionDetailsView(transaction: transaction)
+                            } label: {
+                                TransactionCardView(transaction: transaction)
+                            }
                         }
                     }
+                    .padding()
                 }
-                .padding()
-            }
-            .navigationTitle(Constants.Strings.myTransactions)
-            .task {
-                await viewModel.getTransactions()
+                .navigationTitle(Constants.Strings.myTransactions)
+                .task {
+                    await viewModel.getTransactions()
+                }
+                
+                if viewModel.isLoading {
+                    ProgressView(Constants.Strings.loading)
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
+                }
             }
         }
     }
