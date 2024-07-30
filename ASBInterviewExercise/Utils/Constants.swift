@@ -30,11 +30,14 @@ struct Constants {
     
     struct Strings {
         static let myTransactions =  "My Transactions"
+        static let summary =  "Summary"
+        static let gst = "GST"
     }
     
     struct Formatters {
         static let dateFormatString = "yyyy-MM-dd'T'HH:mm:ss"
         static let displayDateFormatString = "dd/MM/yyyy HH:mm"
+        static let transactionValueFormatString = "%.2f"
     }
     
 }

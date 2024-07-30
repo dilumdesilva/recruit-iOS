@@ -14,7 +14,7 @@ struct TransactionDetailsView: View {
         VStack {
             VStack(alignment: .leading) {
                 VStack(spacing: 20) {
-                    Text("$\(transaction.transactionType == .credit ? transaction.credit : transaction.debit, specifier: "%.2f")")
+                    Text("$\(transaction.transactionType == .credit ? transaction.credit : transaction.debit, specifier: Constants.Formatters.transactionValueFormatString)")
                         .font(.largeTitle)
                         .bold()
                         .foregroundStyle(.white)
@@ -26,11 +26,11 @@ struct TransactionDetailsView: View {
                     }
                 }
                 .padding()
-                .background(transaction.transactionType == .credit ? .red.opacity(0.7) : .green.opacity(0.7))
+                .background(transaction.transactionType == .credit ? .green.opacity(0.7) : .red.opacity(0.7))
                 .cornerRadius(20)
                 
                 HStack {
-                    Text("Summary")
+                    Text(Constants.Strings.summary)
                     Spacer()
                     Text("\(transaction.summary)")
                         .multilineTextAlignment(.trailing)
@@ -38,9 +38,9 @@ struct TransactionDetailsView: View {
                 
                 if transaction.transactionType == .debit {
                     HStack {
-                        Text("GST")
+                        Text(Constants.Strings.gst)
                         Spacer()
-                        
+                        Text("$\(transaction.gst ?? 0, specifier: Constants.Formatters.transactionValueFormatString)")
                     }
                 }
                 

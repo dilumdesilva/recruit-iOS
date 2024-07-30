@@ -25,7 +25,7 @@ struct TransactionsListView: View {
                 }
                 .padding()
             }
-            .navigationTitle("My Transactions")
+            .navigationTitle(Constants.Strings.myTransactions)
             .task {
                 await viewModel.getTransactions()
             }
@@ -33,21 +33,17 @@ struct TransactionsListView: View {
     }
 }
 
-#Preview {
-    TransactionsListView()
-}
-
 struct TransactionCardView: View {
     let transaction: TransactionDTO
     
     var body: some View {
         HStack {
-            Image(systemName: transaction.transactionType == .credit ? "arrow.up.forward" : "arrow.down.left")
-                .foregroundStyle(transaction.transactionType == .credit ? .red : .green)
+            Image(systemName: transaction.transactionType == .credit ? "arrow.down.left" : "arrow.up.forward")
+                .foregroundStyle(transaction.transactionType == .credit ? .green : .red)
                 .font(.title)
             
             VStack(alignment: .leading) {
-                Text("\(transaction.transactionType == .credit ? transaction.credit : transaction.debit, specifier: "%.2f")")
+                Text("$\(transaction.transactionType == .credit ? transaction.credit : transaction.debit, specifier: Constants.Formatters.transactionValueFormatString)")
                     .font(.title)
                     .fontWeight(.medium)
                     .foregroundStyle(.black)
@@ -70,3 +66,9 @@ struct TransactionCardView: View {
         .cornerRadius(20)
     }
 }
+
+#Preview {
+    TransactionsListView()
+}
+
+
