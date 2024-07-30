@@ -51,8 +51,8 @@ struct TransactionDTO: Codable {
     }
     
     var displayDate: String {
-            let dateFormatter = DateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = Constants.Formatters.displayDateFormatString
-            return dateFormatter.string(from: date)
-        }
+        return dateFormatter.string(from: date)
+    }
 }
