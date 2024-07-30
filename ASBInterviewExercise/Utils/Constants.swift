@@ -21,6 +21,7 @@ struct Constants {
     
     struct Files {
         static let mockData = "mock_data"
+        static let mockInvalidData = "mock_invalid_data"
         static let jsonExtensionValue = "json"
     }
     

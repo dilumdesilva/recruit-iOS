@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E3554992C5882FB0079C678 /* MockAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3554982C5882FB0079C678 /* MockAPITarget.swift */; };
+		4E35549A2C5883370079C678 /* BaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBD72C5863D80068AEFE /* BaseNetworking.swift */; };
+		4E35549B2C5883480079C678 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBD02C5862640068AEFE /* Constants.swift */; };
+		4E35549D2C5884C50079C678 /* MockNetworkingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E35549C2C5884C50079C678 /* MockNetworkingStore.swift */; };
+		4E35549E2C5885130079C678 /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBDB2C58669A0068AEFE /* NetworkingClient.swift */; };
+		4E35549F2C5885820079C678 /* TransactionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBCD2C5861580068AEFE /* TransactionDTO.swift */; };
+		4E3554A02C5886B80079C678 /* mock_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EDEBBD32C5863990068AEFE /* mock_data.json */; };
+		4E3554A22C588E230079C678 /* mock_invalid_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E3554A12C588E230079C678 /* mock_invalid_data.json */; };
+		4E3554A32C58901C0079C678 /* mock_invalid_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E3554A12C588E230079C678 /* mock_invalid_data.json */; };
 		4EDEBBC62C585FCD0068AEFE /* TransactionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBC52C585FCD0068AEFE /* TransactionsListView.swift */; };
 		4EDEBBC82C58603E0068AEFE /* TransactionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBC72C58603E0068AEFE /* TransactionDetailsView.swift */; };
 		4EDEBBCB2C5860F70068AEFE /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBCA2C5860F70068AEFE /* TransactionsViewModel.swift */; };
@@ -48,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E3554982C5882FB0079C678 /* MockAPITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPITarget.swift; sourceTree = "<group>"; };
+		4E35549C2C5884C50079C678 /* MockNetworkingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingStore.swift; sourceTree = "<group>"; };
+		4E3554A12C588E230079C678 /* mock_invalid_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock_invalid_data.json; sourceTree = "<group>"; };
 		4EDEBBC52C585FCD0068AEFE /* TransactionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListView.swift; sourceTree = "<group>"; };
 		4EDEBBC72C58603E0068AEFE /* TransactionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsView.swift; sourceTree = "<group>"; };
 		4EDEBBCA2C5860F70068AEFE /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
@@ -139,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				4EDEBBD32C5863990068AEFE /* mock_data.json */,
+				4E3554A12C588E230079C678 /* mock_invalid_data.json */,
 				4EDEBBD52C5863AC0068AEFE /* APITarget.swift */,
 				4EDEBBD72C5863D80068AEFE /* BaseNetworking.swift */,
 				4EDEBBD92C5866670068AEFE /* NetworkingStore.swift */,
@@ -191,6 +204,8 @@
 		DCF7BB1926B23E0200AE0E0E /* ASBInterviewExerciseTests */ = {
 			isa = PBXGroup;
 			children = (
+				4E3554982C5882FB0079C678 /* MockAPITarget.swift */,
+				4E35549C2C5884C50079C678 /* MockNetworkingStore.swift */,
 				DCF7BB1A26B23E0200AE0E0E /* ASBInterviewExerciseTests.swift */,
 				DCF7BB1C26B23E0200AE0E0E /* Info.plist */,
 			);
@@ -317,6 +332,7 @@
 			files = (
 				DCF7BB1026B23E0200AE0E0E /* LaunchScreen.storyboard in Resources */,
 				4EDEBBD42C5863990068AEFE /* mock_data.json in Resources */,
+				4E3554A32C58901C0079C678 /* mock_invalid_data.json in Resources */,
 				DCF7BB0D26B23E0200AE0E0E /* Assets.xcassets in Resources */,
 				DCF7BB0B26B23DFF00AE0E0E /* Main.storyboard in Resources */,
 			);
@@ -326,6 +342,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E3554A02C5886B80079C678 /* mock_data.json in Resources */,
+				4E3554A22C588E230079C678 /* mock_invalid_data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +382,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E35549F2C5885820079C678 /* TransactionDTO.swift in Sources */,
 				DCF7BB1B26B23E0200AE0E0E /* ASBInterviewExerciseTests.swift in Sources */,
+				4E3554992C5882FB0079C678 /* MockAPITarget.swift in Sources */,
+				4E35549E2C5885130079C678 /* NetworkingClient.swift in Sources */,
+				4E35549A2C5883370079C678 /* BaseNetworking.swift in Sources */,
+				4E35549B2C5883480079C678 /* Constants.swift in Sources */,
+				4E35549D2C5884C50079C678 /* MockNetworkingStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
