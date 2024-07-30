@@ -43,7 +43,7 @@ struct TransactionDetailsView: View {
                         Spacer()
                         Text("\(transaction.summary)")
                             .multilineTextAlignment(.trailing)
-                            .accessibility(value: Text("\(transaction.summary)"))
+                            .accessibility(value: Text("Transaction summary is \(transaction.summary)"))
                     }
                     
                     if transaction.transactionType == .debit {
@@ -52,7 +52,7 @@ struct TransactionDetailsView: View {
                                 .accessibility(label: Text("GST"))
                             Spacer()
                             Text("$\(transaction.gst ?? 0, specifier: Constants.Formatters.transactionValueFormatString)")
-                                .accessibility(value: Text("\(transaction.gst ?? 0, specifier: Constants.Formatters.transactionValueFormatString) dollars"))
+                                .accessibility(value: Text("GST \(transaction.gst ?? 0, specifier: Constants.Formatters.transactionValueFormatString) dollars"))
                         }
                     }
                     
