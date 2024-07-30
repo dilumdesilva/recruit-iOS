@@ -21,6 +21,11 @@ struct Constants {
     
     struct Files {
         static let mockData = "mock_data"
+        static let jsonExtensionValue = "json"
+    }
+    
+    struct Error {
+        static let failedToLoadJson = "Failed to load JSON"
     }
     
 }

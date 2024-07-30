@@ -15,6 +15,8 @@
 		4EDEBBD42C5863990068AEFE /* mock_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EDEBBD32C5863990068AEFE /* mock_data.json */; };
 		4EDEBBD62C5863AC0068AEFE /* APITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBD52C5863AC0068AEFE /* APITarget.swift */; };
 		4EDEBBD82C5863D80068AEFE /* BaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBD72C5863D80068AEFE /* BaseNetworking.swift */; };
+		4EDEBBDA2C5866670068AEFE /* NetworkingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBD92C5866670068AEFE /* NetworkingStore.swift */; };
+		4EDEBBDC2C58669A0068AEFE /* NetworkingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBDB2C58669A0068AEFE /* NetworkingClient.swift */; };
 		DCF7BB0426B23DFF00AE0E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */; };
 		DCF7BB0626B23DFF00AE0E0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */; };
 		DCF7BB0826B23DFF00AE0E0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF7BB0726B23DFF00AE0E0E /* ViewController.swift */; };
@@ -54,6 +56,8 @@
 		4EDEBBD32C5863990068AEFE /* mock_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock_data.json; sourceTree = "<group>"; };
 		4EDEBBD52C5863AC0068AEFE /* APITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITarget.swift; sourceTree = "<group>"; };
 		4EDEBBD72C5863D80068AEFE /* BaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworking.swift; sourceTree = "<group>"; };
+		4EDEBBD92C5866670068AEFE /* NetworkingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingStore.swift; sourceTree = "<group>"; };
+		4EDEBBDB2C58669A0068AEFE /* NetworkingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingClient.swift; sourceTree = "<group>"; };
 		DCF7BB0026B23DFE00AE0E0E /* ASBInterviewExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASBInterviewExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCF7BB0326B23DFF00AE0E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCF7BB0526B23DFF00AE0E0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				4EDEBBD32C5863990068AEFE /* mock_data.json */,
 				4EDEBBD52C5863AC0068AEFE /* APITarget.swift */,
 				4EDEBBD72C5863D80068AEFE /* BaseNetworking.swift */,
+				4EDEBBD92C5866670068AEFE /* NetworkingStore.swift */,
+				4EDEBBDB2C58669A0068AEFE /* NetworkingClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -337,7 +343,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EDEBBDC2C58669A0068AEFE /* NetworkingClient.swift in Sources */,
 				4EDEBBC82C58603E0068AEFE /* TransactionDetailsView.swift in Sources */,
+				4EDEBBDA2C5866670068AEFE /* NetworkingStore.swift in Sources */,
 				4EDEBBCE2C5861580068AEFE /* TransactionDTO.swift in Sources */,
 				4EDEBBD82C5863D80068AEFE /* BaseNetworking.swift in Sources */,
 				DCF7BB3726B23EB800AE0E0E /* RestClient.swift in Sources */,
