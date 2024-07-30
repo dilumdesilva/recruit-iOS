@@ -29,7 +29,7 @@ extension APITarget: BaseAPITarget {
     var stubbingBehaviour: StubbingBehavior {
         switch self {
         case .getTransactions:
-            return .immediate
+            return .never
         }
     }
     
