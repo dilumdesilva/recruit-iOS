@@ -24,7 +24,7 @@ final class TransactionsViewModel: ObservableObject {
         let result = await store.getTransactions()
         switch result {
         case .success(let transactions):
-            self.transactions = transactions
+            self.transactions = transactions.sorted { $0.date < $1.date }
             isLoading = false
         case .failure(let error):
             self.error = error

@@ -43,7 +43,7 @@ struct TransactionDTO: Codable {
         }
     }
     
-    private var date: Date {
+    var date: Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = Constants.Formatters.dateFormatString
         
