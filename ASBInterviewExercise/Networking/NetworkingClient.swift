@@ -18,7 +18,7 @@ extension NetworkingClient {
         #if DEBUG
         if apiTarget.stubbingBehaviour == .immediate {
             guard let path = Bundle.main.url(forResource: apiTarget.stubData, withExtension: Constants.Files.jsonExtensionValue) else {
-                fatalError(Constants.Error.failedToLoadJson)
+                fatalError(Constants.Errors.failedToLoadJson)
             }
             
             do {

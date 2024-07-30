@@ -12,7 +12,7 @@ enum TransactionType: String {
     case debit = "Debit"
 }
 
-struct TransactionModel: Codable {
+struct TransactionDTO: Codable {
     let id : Int
     let transactionDate : String
     let summary : String
@@ -42,4 +42,17 @@ struct TransactionModel: Codable {
             return nil
         }
     }
+    
+    private var date: Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = Constants.Formatters.dateFormatString
+        
+        return dateFormatter.date(from: transactionDate) ?? Date()
+    }
+    
+    var displayDate: String {
+            let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = Constants.Formatters.displayDateFormatString
+            return dateFormatter.string(from: date)
+        }
 }

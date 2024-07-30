@@ -11,7 +11,7 @@ import Foundation
 final class TransactionsViewModel: ObservableObject {
     let store: NetworkingStore
     
-    @Published var transactions: [TransactionModel]?
+    @Published var transactions: [TransactionDTO]?
     @Published var error: NetworkError?
     @Published var isLoading = false
     

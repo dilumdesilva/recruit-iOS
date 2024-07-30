@@ -8,11 +8,56 @@
 import SwiftUI
 
 struct TransactionDetailsView: View {
+    let transaction: TransactionDTO
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            VStack(alignment: .leading) {
+                VStack(spacing: 20) {
+                    Text("$\(transaction.transactionType == .credit ? transaction.credit : transaction.debit, specifier: "%.2f")")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundStyle(.white)
+                    
+                    HStack {
+                        Text("\(transaction.displayDate)")
+                        Spacer()
+                        Text("\(transaction.transactionType.rawValue)")
+                    }
+                }
+                .padding()
+                .background(transaction.transactionType == .credit ? .red.opacity(0.7) : .green.opacity(0.7))
+                .cornerRadius(20)
+                
+                HStack {
+                    Text("Summary")
+                    Spacer()
+                    Text("\(transaction.summary)")
+                        .multilineTextAlignment(.trailing)
+                }
+                
+                if transaction.transactionType == .debit {
+                    HStack {
+                        Text("GST")
+                        Spacer()
+                        
+                    }
+                }
+                
+                Spacer()
+            }
+        }
+        .padding()
     }
 }
 
 #Preview {
-    TransactionDetailsView()
+    TransactionDetailsView(transaction: TransactionDTO(
+        id: 1,
+        transactionDate: "2021-08-31T15:47:10",
+        summary: "Hackett, Stamm and Kuhn",
+        debit: 9379.55,
+        credit: 0
+    ))
 }
+

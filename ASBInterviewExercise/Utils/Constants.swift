@@ -24,8 +24,17 @@ struct Constants {
         static let jsonExtensionValue = "json"
     }
     
-    struct Error {
+    struct Errors {
         static let failedToLoadJson = "Failed to load JSON"
+    }
+    
+    struct Strings {
+        static let myTransactions =  "My Transactions"
+    }
+    
+    struct Formatters {
+        static let dateFormatString = "yyyy-MM-dd'T'HH:mm:ss"
+        static let displayDateFormatString = "dd/MM/yyyy HH:mm"
     }
     
 }

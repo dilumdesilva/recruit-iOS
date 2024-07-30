@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         demoTextView.text = ""
         
         //Porting to Swift UI
-        let transactionsListView = TransactionListView()
+        let transactionsListView = TransactionsListView()
         
         let hostingController = UIHostingController(rootView: transactionsListView)
         addChild(hostingController)

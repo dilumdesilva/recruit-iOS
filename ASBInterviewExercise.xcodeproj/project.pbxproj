@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EDEBBC62C585FCD0068AEFE /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBC52C585FCD0068AEFE /* TransactionListView.swift */; };
+		4EDEBBC62C585FCD0068AEFE /* TransactionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBC52C585FCD0068AEFE /* TransactionsListView.swift */; };
 		4EDEBBC82C58603E0068AEFE /* TransactionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBC72C58603E0068AEFE /* TransactionDetailsView.swift */; };
-		4EDEBBCB2C5860F70068AEFE /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBCA2C5860F70068AEFE /* TransactionViewModel.swift */; };
+		4EDEBBCB2C5860F70068AEFE /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBCA2C5860F70068AEFE /* TransactionsViewModel.swift */; };
 		4EDEBBCE2C5861580068AEFE /* TransactionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBCD2C5861580068AEFE /* TransactionDTO.swift */; };
 		4EDEBBD12C5862640068AEFE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDEBBD02C5862640068AEFE /* Constants.swift */; };
 		4EDEBBD42C5863990068AEFE /* mock_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EDEBBD32C5863990068AEFE /* mock_data.json */; };
@@ -48,9 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4EDEBBC52C585FCD0068AEFE /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
+		4EDEBBC52C585FCD0068AEFE /* TransactionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListView.swift; sourceTree = "<group>"; };
 		4EDEBBC72C58603E0068AEFE /* TransactionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsView.swift; sourceTree = "<group>"; };
-		4EDEBBCA2C5860F70068AEFE /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		4EDEBBCA2C5860F70068AEFE /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
 		4EDEBBCD2C5861580068AEFE /* TransactionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDTO.swift; sourceTree = "<group>"; };
 		4EDEBBD02C5862640068AEFE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4EDEBBD32C5863990068AEFE /* mock_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mock_data.json; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		4EDEBBC42C585FB70068AEFE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4EDEBBC52C585FCD0068AEFE /* TransactionListView.swift */,
+				4EDEBBC52C585FCD0068AEFE /* TransactionsListView.swift */,
 				4EDEBBC72C58603E0068AEFE /* TransactionDetailsView.swift */,
 			);
 			path = Views;
@@ -114,7 +114,7 @@
 		4EDEBBC92C5860D20068AEFE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				4EDEBBCA2C5860F70068AEFE /* TransactionViewModel.swift */,
+				4EDEBBCA2C5860F70068AEFE /* TransactionsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -354,9 +354,9 @@
 				4EDEBBD12C5862640068AEFE /* Constants.swift in Sources */,
 				DCF7BB0626B23DFF00AE0E0E /* SceneDelegate.swift in Sources */,
 				DCF7BB3926B23ED000AE0E0E /* DIManager.swift in Sources */,
-				4EDEBBC62C585FCD0068AEFE /* TransactionListView.swift in Sources */,
+				4EDEBBC62C585FCD0068AEFE /* TransactionsListView.swift in Sources */,
 				4EDEBBD62C5863AC0068AEFE /* APITarget.swift in Sources */,
-				4EDEBBCB2C5860F70068AEFE /* TransactionViewModel.swift in Sources */,
+				4EDEBBCB2C5860F70068AEFE /* TransactionsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -517,7 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -570,7 +570,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ASBInterviewExerciseTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -591,7 +591,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ASBInterviewExerciseTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
